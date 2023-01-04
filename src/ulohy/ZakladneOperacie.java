@@ -1,4 +1,4 @@
-package basicexamples;
+package ulohy;
 
 import java.util.Scanner;
 
