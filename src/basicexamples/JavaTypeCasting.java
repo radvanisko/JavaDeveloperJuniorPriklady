@@ -11,7 +11,7 @@ public class JavaTypeCasting {
         // String str = myInt; // Is not possible
         // System.out.println(str);
 
-        double myDouble2 = 9.48d;
+        double myDouble2 = 9.78d;
         int myInt2 = (int) myDouble2; // Manual casting: double to int
 
         System.out.println(myDouble2);   // Outputs 9.78
