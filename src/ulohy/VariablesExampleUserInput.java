@@ -53,8 +53,15 @@ public class VariablesExampleUserInput {
             System.out.println("Uchadzac je prijaty");
         }
         else
-        {
+        {        if ((grade>1.5) && (grade<3)) {
+                        System.out.println("Porozmyslam ");
+
+                                                }
+                                                else {
+
             System.out.println("Uchadzac je odmietnuty");
+        }
+
         }
 
 /*
