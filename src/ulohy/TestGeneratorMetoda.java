@@ -18,8 +18,8 @@ public class TestGeneratorMetoda {
 
         //System.out.println(randomvalue);
 
-        for (int i = 1; i < 1000; i++) {
-            int randomvalue = generuj(1, 100);
+        for (int i = 1; i < 100; i++) {
+            int randomvalue = generuj(10, 35);
             System.out.println(randomvalue);
             if (randomvalue == 100) counter++;
 

@@ -7,16 +7,16 @@ public class TestGenerator {
 
 
 int counter=0;
-final int minimalvalue=1;
+final int minimalvalue=150;
 
-        for (int i = 1; i<1000;i++)
+        for (int i = 1; i<100;i++)
         {
           Random rn=new Random();
-          int randomValue=rn.nextInt(10)+minimalvalue;
-           if (randomValue==0) counter++;
+          int randomValue=rn.nextInt(30)+minimalvalue;
+           if (randomValue==150) counter++;
 
           //          int randomValue = (int) ((Math.random() * 10)+1);
-//            System.out.println(randomValue);
+            System.out.println(randomValue);
         }
         System.out.println("je tam co hladam " + "vyskytlo sa " + counter);
 
