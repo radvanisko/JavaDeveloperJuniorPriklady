@@ -1,18 +1,22 @@
 package ulohy;
+import java.util.Random;
 import java.util.Scanner;
-
 
 public class UhadniCislo {
 
     public static void main(String[] args) {
 
-        int number = 200;
-        int randomValue = (int) (Math.random() * 101);
+        int number = 0;
+//        int randomValue = (int) (Math.random() * 101);
         int counter = 0;
+
+        Random rn=new Random();
+        int randomValue=rn.nextInt(100)+1;
 
         System.out.println(randomValue);
         System.out.println("Prave som si vymyslel číslo od 0-100 - uhadni ake?");
         System.out.println();
+
         Scanner sc1 = new Scanner(System.in);
         System.out.println(" Zadaj svoje cislo");
         number = sc1.nextInt();
@@ -29,7 +33,7 @@ public class UhadniCislo {
                 } else {
                     System.out.println("Tvoje cislo je mensie skus znova");
                 }
-                sc1 = new Scanner(System.in);
+//                sc1 = new Scanner(System.in);
                 System.out.println(" Zadaj svoje cislo");
                 number = sc1.nextInt();
                 counter++;
