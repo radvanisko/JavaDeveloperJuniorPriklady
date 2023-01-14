@@ -39,6 +39,7 @@ public class HodnoteniePodlaZnamky {
             znamka = sc1.nextLine();
             znamka2=stripAccents(znamka);
             znamka2=znamka2.toLowerCase();
+            znamka2=znamka2.trim();
 
 //            System.out.println(znamka + "   " +znamka2);
 
