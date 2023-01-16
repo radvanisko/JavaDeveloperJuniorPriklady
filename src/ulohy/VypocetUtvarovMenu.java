@@ -7,31 +7,25 @@ public class VypocetUtvarovMenu {
     public static void main (String[] args ){
 
         String volba;
-        Scanner sc1 = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        sc = new Scanner(System.in);
 
         while (true) {
-
-            try {
+                System.out.println();
+            System.out.println("---------------------------------------------------");
                 System.out.println("MENU>  s= vypocet parametrov obdlznika ,  q= quit : ");
-                System.out.println("Zadaj svoju volbu");
-                sc1 = new Scanner(System.in);
-                volba = sc1.next();
+            System.out.println("---------------------------------------------------");
+                System.out.println("Zadaj svoju volbu:");
+                volba = sc.next();
 
                 if(volba.equals("s")) {
-                    System.out.println("tu by som chcel spusti program na vypocet parametrov obdlznikaq");
-
-
-                    // tu by som chcel spustit class VypocetObdlznikMetoda;
+                    System.out.println("Program na vypocet parametrov obdlznika ");
                     VypocetObdlznikMetoda.main(null);
 
                                     }
 
                     if(volba.equals("q")) {
-                    System.out.println("koniec") ;sc1.close();break;}
-                    }
-
-            catch  (Exception e ){
-                System.out.println("Zadana blbost  - mas zadat polomer, cize hodnotu");
+                    System.out.println("koniec") ;sc.close();break;}
 
             }
 
@@ -42,4 +36,4 @@ public class VypocetUtvarovMenu {
 
     }
 
-}
+

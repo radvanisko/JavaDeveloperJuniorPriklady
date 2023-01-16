@@ -24,7 +24,8 @@ pričom písmeno s od používateľa bude žiadať zadanie strán a, b. Po zadan
 
 */
 
-public class VypocetObdlznikMetoda {
+public class VypocetObdlznikMetoda
+{
 
 
     public static double getPerimeter(double a,double b) {
@@ -34,72 +35,63 @@ public class VypocetObdlznikMetoda {
             return a*b;
         }
 
-    public static void vypisText(double stranaa, double stranab) {
-        System.out.println(" Nejaky proprietarny blok textuuu");
-
+    public static void vypisText(double stranaa, double stranab)
+    {
+        System.out.println("_____________________");
         System.out.println( "Strany obdlznika :" );
-        System.out.println(("Strana a je: "+ stranaa ));
-        System.out.println(("Strana b je: " + stranab));
+        System.out.println(("Strana a : "+ stranaa ));
+        System.out.println(("Strana b : " + stranab));
         System.out.println();
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
-        // obvod kruhu
+
         //final double pi = Math.PI;  len pre srandu
+
+        double stranaa,stranab;
 
         while (true) {
 
-            try {
+        try
+        {
+            Scanner sc1 = new Scanner(System.in);
                 System.out.println("Zadaj Stranu a  :");
-                Scanner sc1 = new Scanner(System.in);
-                double stranaa = sc1.nextDouble();
+                stranaa = sc1.nextDouble();
 
-                if(stranaa <=0) {
-                    System.out.println("koniec") ;sc1.close();;return;}
+             if(stranaa <=0) { System.out.println("koniec") ;return;}
 
                 System.out.println("Zadaj Stranu b :");
-                sc1 = new Scanner(System.in);
-                double stranab = sc1.nextDouble();
-
-                if(stranab <=0) {
-                    System.out.println("koniec") ;sc1.close();;return;}
-
-               // vypisText("Objekt obdlznik  je strana a" + stranaa + "strana b" + stranab);
+                stranab = sc1.nextDouble();
 
 
-                /*System.out.println( "Strany obdlznika :" );
-                System.out.println(("Strana a je: "+ stranaa ));
-                System.out.println(("Strana b je: " + stranab));
-                System.out.println();*/
+                if(stranab <=0) {System.out.println("koniec") ;return;}
 
                 vypisText(stranaa,stranab);
 
-                System.out.printf("Obvod obdlznika " + getPerimeter(stranaa,stranab));
-                System.out.println();
-                System.out.printf("Obsah  obdlznika "+ getArea(stranaa,stranab));
+                System.out.println("Obvod obdlznika :"+ getPerimeter(stranaa,stranab));
+                System.out.println("Obsah obdlznika :"+ getArea(stranaa,stranab));
+                System.out.println("-------------------------------------");
                 System.out.println();
 
             }
 
-            catch  (Exception e ){
-                System.out.println("Zadana blbost  - mas zadat stranu a a stranu b, cize hodnotu");
+
+        catch  (Exception e ){
+                System.out.println("Zadana blbost  - mas zadat stranu a a stranu b, cize hodnotu");}
 
             }
-
-
-
-        }
+    }
 
     }
 
-    @Test
-    public void testgetPerimeter() {
 
+    /*@Test
+    public void testgetPerimeter()
+    {
         assertEquals(7,getArea(2,3));
+    }*/
 
-
-    }
-}
 
