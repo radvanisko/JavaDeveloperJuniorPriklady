@@ -13,7 +13,7 @@ public class VypocetUtvarovMenu {
         while (true) {
                 System.out.println();
             System.out.println("---------------------------------------------------");
-                System.out.println("MENU>  s= vypocet parametrov obdlznika ,  q= quit : ");
+                System.out.println("MENU>  (s)= vypocet parametrov obdlznika ,  (q)= quit : ");
             System.out.println("---------------------------------------------------");
                 System.out.println("Zadaj svoju volbu:");
                 volba = sc.next();
@@ -26,6 +26,7 @@ public class VypocetUtvarovMenu {
 
                     if(volba.equals("q")) {
                     System.out.println("koniec") ;sc.close();break;}
+
 
             }
 

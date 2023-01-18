@@ -1,4 +1,6 @@
 package ulohy;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
@@ -28,7 +30,8 @@ public class VypocetObdlznikMetoda
 {
 
 
-    public static double getPerimeter(double a,double b) {
+    public static double getPerimeter(double a,double b)
+    {
         return 2 * (a + b);
     }
    public static double getArea (double a,double b) {
@@ -84,14 +87,53 @@ public class VypocetObdlznikMetoda
 
             }
     }
+/*
+
+    @Test
+    public void testgetPerimeter() {
+
+            assertEquals(10, getPerimeter(2, 3));
+        assertEquals(12, getPerimeter(2, 3));
+    }
+    @Test
+    public void testgetArea() {
+
+        assertEquals(6, getArea(2, 3));
+        assertEquals(12, getArea(2, 3));
+    }
+
+
+*/
+
+
+    @Nested
+    @DisplayName("Tests for my method")
+    class MyMethodUseCases {
+        @Test
+        public void testGetPerimeter() {
+            assertEquals(10, getPerimeter(2, 3));
+            assertEquals(11, getPerimeter(2.5, 4));
+        }
+
+        @Test
+        public void testGetArea() {
+            assertEquals(6, getArea(2, 3));
+            assertEquals(10, getArea(2.5, 4));
+            assertEquals(6, getArea(1, 5));
+        }
 
     }
 
 
-    /*@Test
-    public void testgetPerimeter()
-    {
-        assertEquals(7,getArea(2,3));
-    }*/
+    }
+
+
+
+
+
+
+
+
+
 
 
