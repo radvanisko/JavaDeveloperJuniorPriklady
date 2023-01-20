@@ -41,18 +41,20 @@ public class ExcelBasicFormulasWithArrayList {
 
     public static double getAverageDynArray(ArrayList<Double> dynpole )
     {
-        double average=0;
+        double sum,average;
+        sum=0;
         for (int i = 0; i < dynpole.size(); i++) {
-            average=average+dynpole.get(i);
+            sum=sum+dynpole.get(i);
         }
-        average=average/ dynpole.size();
+        average=sum/ dynpole.size();
         return average;
     }
     public static double getMaxDynArray(ArrayList<Double> dynpole){
 
-        double max=-99999999999999999999999d; // pozor ak to budu vsetko -cisla , tak max bude 0
+        double max;
+        max=dynpole.get(0);
         for (int i = 1; i < dynpole.size(); i++) {
-            max=Math.max(dynpole.get((i)-1),dynpole.get(i));
+            max=Math.max(max,dynpole.get(i-1));
         }
 
         return max;
@@ -62,23 +64,22 @@ public class ExcelBasicFormulasWithArrayList {
 
 double x,y=0;
     public static void main(String[] args) {
-         //divna inicializacia
 
         ArrayList <Double> dynamickepole= new ArrayList<Double>();
         Scanner sc1 = new Scanner(System.in);
-        double z=999999999999999999999999999999d;
+        double hodnota=0;
         int index=0;
 
         System.out.println("Zadavaj prosím  prvky pola. Hodnoty musia byť kladne cisla.");
         System.out.println("Na ukončenie zadavania prvok pola zadaj  zapornu hodnotu");
 
-        while (z>=0)
+        while (hodnota>=0)
         {
-            try { z = sc1.nextDouble(); }
+            try { hodnota = sc1.nextDouble(); }
             catch  (Exception e ){ System.out.println("Zadana blbost  - mas zadat cisla");return;}
 
-            if (z>=0) {
-                dynamickepole.add(index,z);
+            if (hodnota>=0) {
+                dynamickepole.add(index,hodnota);
 
             }
              index++;
@@ -117,7 +118,7 @@ double x,y=0;
         public void testDynArrayMax() {
 //
 //            ArrayList <Double> pole=new ArrayList<Double>;
-//            pole.add(2,2,2,2,2,);
+//            pole.add(3,5,7,555,99);
 //            assertEquals(10,getMaxDynArray(pole);
 
         }
