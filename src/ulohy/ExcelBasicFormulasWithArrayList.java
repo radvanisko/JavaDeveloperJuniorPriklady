@@ -20,11 +20,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
+import java.sql.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static ulohy.ExcelBasicFormulas.getMaxArray;
 
 public class ExcelBasicFormulasWithArrayList {
 
@@ -126,9 +129,15 @@ double x,y=0;
 
         public void testDynArraySum() {
 
-            // vytvor ArrayList pole
+            ArrayList<Double> pole = new ArrayList<>();
+            pole.add(0, 10.0);
+            pole.add(1,20d);
+            pole.add(1,30d);
+            pole.add(1,40d);
+            pole.add(1,50d);
 
-//            assertEquals(50,getSumDynArray(pole));
+            assertEquals(150,getSumDynArray(pole));
+
         }
     }
 }

@@ -155,6 +155,7 @@ double x,y=0;
             double pole[]={10,10,10,10,10};
 
             assertEquals(50,getSumArray(pole));
+
         }
     }
 }
