@@ -151,7 +151,6 @@ double x,y=0;
         @Test
 
         public void testSumArray() {
-//            assertEquals(50,getMaxArray(as);
             double pole[]={10,10,10,10,10};
 
             assertEquals(50,getSumArray(pole));
