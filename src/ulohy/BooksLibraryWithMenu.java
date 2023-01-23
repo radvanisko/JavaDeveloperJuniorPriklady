@@ -55,62 +55,88 @@ public static List<String> findUsingLoop(String search, List<String> list) {
 
 */
 
-
+//TODO  : Vytvorte metódu (findBookByName), Vytvorte metódu (findBooksByFulltextSearch), -
+//TODO : Zobraz názov poslednej knihy, Zobraz názov prvej knihy - len formalita
 
 
 public class BooksLibraryWithMenu {
 
-    public  static void vypisDynamickePole (ArrayList<String> dynpole){
+    public static void vypisDynamickePole(ArrayList<String> dynpole) {
 
-        System.out.print("Zoznam knih : "+ "{" );
+        System.out.print("Zoznam knih : " + "{");
         for (int i = 0; i < dynpole.size(); i++) {
-            System.out.print(dynpole.get(i) +",");
+            System.out.print(dynpole.get(i) + ",");
         }
         System.out.print("}");
         System.out.println();
 
         // prechadzame vsetkymi prvkami dynamickeho pola knihy, SPOSOB c.2
-        for (String kniha:dynpole) {
+        for (String kniha : dynpole) {
             System.out.println(kniha);
         }
 
     }
 
-    public static int getCountOfAllBooks(ArrayList<String> dynpole){
-        return  dynpole.size();
+    public static int getCountOfAllBooks(ArrayList<String> dynpole) {
+        return dynpole.size();
     }
 
-    public static void removeAllBooks(ArrayList<String> dynpole){
+    public static void removeAllBooks(ArrayList<String> dynpole) {
 
         Scanner sc2 = new Scanner(System.in);
-                sc2 = new Scanner(System.in);
+        sc2 = new Scanner(System.in);
         System.out.println("Vazne chces zmazat cely zoznam ? (Y/n)");
 
         if (sc2.next().equals("Y")) dynpole.removeAll(dynpole);
 
     }
-    public static String getFirstBook (ArrayList<String>dynpole ) {
+
+    public static String getFirstBook(ArrayList<String> dynpole) {
 
         String prvakniha;
-        return prvakniha=dynpole.get(dynpole.size());
+        return prvakniha = dynpole.get(dynpole.size());
 
     }
-    public  static void getBookByIndex (ArrayList<String> dynpople) {
+
+    public static void getBookByIndex(ArrayList<String> dynpole) {
 
         Scanner sc2 = new Scanner(System.in);
         sc2 = new Scanner(System.in);
-        System.out.println("Zadaj cislo indexu knihy, ktory chces vypísať - v zozname je pocet knih :" + dynpople.size());
+        System.out.println("Zadaj cislo indexu knihy, ktory chces vypísať - v zozname je pocet knih :" + dynpole.size());
 
         int index = 0;
         try {
             index = sc2.nextInt();
-            if (index >= dynpople.size()+1) System.out.println(" v kniznici nemas tolko knih");
+            if (index >= dynpole.size() + 1) System.out.println(" v kniznici nemas tolko knih");
             else
-                System.out.println("V knižnici máš pod číslom  " + (index) + "  knihu s nazvom :" + dynpople.get(index-1));
+                System.out.println("V knižnici máš pod číslom  " + (index) + "  knihu s nazvom :" + dynpole.get(index - 1));
         } catch (Exception e) {
-            System.out.println("chyba v zadani indexu");vypisMenu();
+            System.out.println("chyba v zadani indexu");
+            vypisMenu();
         }
     }
+
+    public static void removeBookByIndex(ArrayList<String> dynpole)
+    {
+        Scanner sc2 = new Scanner(System.in);
+        sc2 = new Scanner(System.in);
+        System.out.println("Zadaj cislo indexu knihy, ktory chces VYMAZAT - v zozname je pocet knih :" + dynpole.size());
+
+        int index = 0;
+        try {
+            index = sc2.nextInt();
+            if (index >= dynpole.size() + 1) System.out.println(" v kniznici nemas tolko knih");
+            else
+                System.out.println("Z kniznice bola vymazaza  pod cislom " + (index) + "  kniha s nazvom :" + dynpole.get(index - 1));
+            dynpole.remove(index);
+        } catch (Exception e) {
+            System.out.println("chyba v zadani indexu knihy");
+            vypisMenu();
+        }
+
+
+
+}
 
     public static void vypisMenu()  {
         System.out.println();
@@ -121,6 +147,7 @@ public class BooksLibraryWithMenu {
         System.out.println("MENU>      (2)= Vypíš zoznam knih,          (q)= quit : ");
         System.out.println("MENU>      (3)= Vypíš knihu podľa indexu    (q)= quit : ");
         System.out.println("MENU>      (6)= Vypíš počet knih,           (q)= quit : ");
+        System.out.println("MENU>      (7)= Vymaž knihu podľa indexu    (q)= quit : ");
 
         System.out.println("MENU>      (8)= Zmaž všetky knihy,          (q)= quit : ");
         System.out.println("MENU>      (0)= Sortuj,....                 (q)= quit : ");
@@ -170,6 +197,11 @@ public class BooksLibraryWithMenu {
 
                     case "6":
                         System.out.println("Počet knih v kniznici je : " + getCountOfAllBooks(zoznamknih));
+                        System.out.println("Zadaj svoju volbu:");
+                        break;
+
+                    case "7":
+                        removeBookByIndex(zoznamknih);
                         System.out.println("Zadaj svoju volbu:");
                         break;
 
