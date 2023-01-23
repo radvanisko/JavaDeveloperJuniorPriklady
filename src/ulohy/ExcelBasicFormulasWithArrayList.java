@@ -64,8 +64,6 @@ public class ExcelBasicFormulasWithArrayList {
 
     }
 
-
-double x,y=0;
     public static void main(String[] args) {
 
         ArrayList <Double> dynamickepole= new ArrayList<Double>();
@@ -74,7 +72,7 @@ double x,y=0;
         int index=0;
 
         System.out.println("Zadavaj prosím  prvky pola. Hodnoty musia byť kladne cisla.");
-        System.out.println("Na ukončenie zadavania prvok pola zadaj  zapornu hodnotu");
+        System.out.println("Na ukončenie zadavania prvkov, pola zadaj  zapornu hodnotu");
 
         while (hodnota>=0)
         {
@@ -113,6 +111,7 @@ double x,y=0;
         System.out.print("}");
         System.out.println();
     }
+
 
     @Nested
     @DisplayName("Tests for my method")
