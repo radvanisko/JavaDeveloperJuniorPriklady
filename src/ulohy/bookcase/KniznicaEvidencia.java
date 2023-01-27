@@ -1,7 +1,8 @@
-package ulohy;
+package ulohy.bookcase;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
+
+import static ulohy.bookcase.KniznicaMenu.vypisMenu;
 
 
 
@@ -57,10 +58,42 @@ public static List<String> findUsingLoop(String search, List<String> list) {
 
 //TODO  : Vytvorte metódu (findBookByName), Vytvorte metódu (findBooksByFulltextSearch), -
 //TODO : Zobraz názov poslednej knihy, Zobraz názov prvej knihy - len formalita
+//TODO prerobit s objektom KnihaObject
 
+public class KniznicaEvidencia {
 
-public class BooksLibraryWithMenu {
+    public static void vypisKnihuObjekt(ArrayList<String>Knihaobjekt) {
 
+        System.out.print("Zoznam knih : " + "{");
+        for (int i = 0; i < Knihaobjekt.size(); i++) {
+            System.out.print(Knihaobjekt.get(i) + ",");
+        }
+        System.out.print("}");
+        System.out.println();
+
+        // prechadzame vsetkymi prvkami dynamickeho pola knihy, SPOSOB c.2
+        for (String kniha : Knihaobjekt) {
+            System.out.println(kniha);
+        }
+
+    }
+
+    public static void vypisKnihuObjektDetail(ArrayList<String>Knihaobjekt) {
+
+        /*System.out.print("Zoznam knih : " + "{");
+        for (int i = 0; i < Knihaobjekt.size(); i++) {
+            System.out.print(Knihaobjekt.get(i) + ",");
+        }
+        System.out.print("}");
+        System.out.println();*/
+
+        // prechadzame vsetkymi prvkami dynamickeho pola knihy, SPOSOB c.2
+        System.out.println("Detailny zoznam kníh :");
+        for (String kniha : Knihaobjekt) {
+            System.out.print(Knihaobjekt);
+        }
+
+    }
     public static void vypisDynamickePole(ArrayList<String> dynpole) {
 
         System.out.print("Zoznam knih : " + "{");
@@ -77,6 +110,8 @@ public class BooksLibraryWithMenu {
 
     }
 
+
+
     public static int getCountOfAllBooks(ArrayList<String> dynpole) {
         return dynpole.size();
     }
@@ -87,7 +122,8 @@ public class BooksLibraryWithMenu {
         sc2 = new Scanner(System.in);
         System.out.println("Vazne chces zmazat cely zoznam ? (Y/n)");
 
-        if (sc2.next().equals("Y")) dynpole.removeAll(dynpole);
+        if (sc2.next().equals("Y")) {dynpole.removeAll(dynpole);
+            System.out.println("Všetky knihy boli zmazané");}
 
     }
 
@@ -134,11 +170,8 @@ public class BooksLibraryWithMenu {
             vypisMenu();
         }
 
-
-
 }
-
-    public static void vypisMenu()  {
+    /*public static void vypisMenu()  {
         System.out.println();
         System.out.println("---------------------------------------------------");
         System.out.println("MENU>      (m)= MENU,....                 (q)= quit : ");
@@ -156,13 +189,13 @@ public class BooksLibraryWithMenu {
         System.out.println("---------------------------------------------------");
         System.out.println("Zadaj svoju volbu:");
 
-    }
+    }*/
 
-    public static void main (String[] args ){
 
-        ArrayList <String> zoznamknih= new ArrayList<String>();
-        String menuvolba;
-        Scanner sc = new Scanner(System.in);
+
+
+
+/*
 
         sc = new Scanner(System.in);
         vypisMenu();
@@ -181,7 +214,7 @@ public class BooksLibraryWithMenu {
                         while (true)
                         {
                             nazovknihy=sc1.nextLine();
-                            if (nazovknihy.equals("quit")) {break;}
+                            if (nazovknihy.toLowerCase().equals("quit")) {break;}
                             if (!nazovknihy.equals("")) { zoznamknih.add(nazovknihy);}
                         }
                         vypisMenu();
@@ -224,6 +257,7 @@ public class BooksLibraryWithMenu {
                         vypisMenu();
 
                 }
+*/
 
 
     /*            if(menuvolba.equals("1")) {
@@ -251,16 +285,15 @@ public class BooksLibraryWithMenu {
             if(menuvolba.equals("m"))   {vypisMenu(); }
             if(menuvolba.equals("q")) { System.out.println("Koniec programu") ;sc.close();break;}
 
-*/
+
 
 
             }
-
-
+*/
 
         }
 
 
-    }
+
 
 
