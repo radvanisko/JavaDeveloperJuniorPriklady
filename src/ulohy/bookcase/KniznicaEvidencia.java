@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 import static ulohy.bookcase.KniznicaMenu.vypisMenu;
 
-
-
 /*
 
 Úloha č. 2
@@ -59,6 +57,7 @@ public static List<String> findUsingLoop(String search, List<String> list) {
 //TODO  : Vytvorte metódu (findBookByName), Vytvorte metódu (findBooksByFulltextSearch), -
 //TODO : Zobraz názov poslednej knihy, Zobraz názov prvej knihy - len formalita
 //TODO prerobit s objektom KnihaObject
+//TODO dorobit Gui
 
 public class KniznicaEvidencia {
 
@@ -171,6 +170,10 @@ public class KniznicaEvidencia {
         }
 
 }
+}
+
+//  Presunute do KniznicaMenu  -  konzolove menu bŕŕŕŕŕ.....
+
     /*public static void vypisMenu()  {
         System.out.println();
         System.out.println("---------------------------------------------------");
@@ -291,7 +294,6 @@ public class KniznicaEvidencia {
             }
 */
 
-        }
 
 
 

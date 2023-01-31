@@ -1,4 +1,4 @@
-package ulohy.bookcase;
+package ulohy.bookcase.model;
 
 
 // priprava objektu KnihaObjekt
@@ -39,5 +39,8 @@ public class KnihaObject {
 
     public void setCena(double cena) {
         this.cena = cena;
+    }
+
+    public KnihaObject() {
     }
 }

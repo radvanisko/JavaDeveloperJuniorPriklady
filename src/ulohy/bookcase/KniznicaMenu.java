@@ -98,7 +98,7 @@ public class KniznicaMenu {
         System.out.println("---------------------------------------------------");
         System.out.println("MENU>      (m)= MENU,....                 (q)= quit : ");
         System.out.println("---------------------------------------------------");
-        System.out.println("MENU>       1)= Zadaj novu knihu ,          (q)= quit : ");
+        System.out.println("MENU>      (1)= Zadaj novu knihu ,          (q)= quit : ");
         System.out.println("MENU>      (2)= Vypíš zoznam knih,          (q)= quit : ");
         System.out.println("MENU>      (3)= Vypíš knihu podľa indexu    (q)= quit : ");
         System.out.println("MENU>      (6)= Vypíš počet knih,           (q)= quit : ");
