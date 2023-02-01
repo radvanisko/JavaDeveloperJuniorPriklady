@@ -1,4 +1,4 @@
-package ulohy.bookcase.model;
+package ulohy.bookcaseobjektovo.model;
 
 
 // priprava objektu KnihaObjekt

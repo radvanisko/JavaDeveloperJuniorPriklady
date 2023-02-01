@@ -1,4 +1,4 @@
-package ulohy.bookcase;
+package ulohy.bookcasegui.tests;
 
 import java.awt.EventQueue;
 

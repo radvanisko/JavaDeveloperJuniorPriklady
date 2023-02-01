@@ -1,13 +1,9 @@
-package ulohy.bookcase.gui;
+package ulohy.bookcasegui.gui;
 
 
-import org.w3c.dom.Text;
-import ulohy.bookcase.model.KnihaObject;
-
+import ulohy.bookcasegui.model.KnihaObject;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
 
 public class ZadacieOkno extends JDialog {
     private JPanel contentPane;
@@ -19,6 +15,7 @@ public class ZadacieOkno extends JDialog {
     private JTextField textField4;
 
     public ZadacieOkno() {
+
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -53,33 +50,35 @@ public class ZadacieOkno extends JDialog {
 
     private void onOK() {
 
-        KnihaObject kniha=new KnihaObject();
+        KnihaObject aktualnakniha=new KnihaObject();
 
         String textove;
         textove=textField1.getText();
         if (textove.equals("")) {}
         else
         {
-            kniha.setMeno(textField1.getText());
-            kniha.setAutor(textField2.getText());
+            aktualnakniha.setMeno(textField1.getText());
+            aktualnakniha.setAutor(textField2.getText());
 
             // osetrene vstupy pre ocakavany integer Rokvydania a Cena
             try {
-                kniha.setRokvydania(Integer.parseInt(textField3.getText()));
+                aktualnakniha.setRokvydania(Integer.parseInt(textField3.getText()));
             } catch (NumberFormatException e) {
-                kniha.setRokvydania(0);
+                aktualnakniha.setRokvydania(0);
             }
             try {
-                kniha.setCena(Integer.parseInt(textField4.getText()));
+                aktualnakniha.setCena(Integer.parseInt(textField4.getText()));
             } catch (NumberFormatException e) {
-                kniha.setCena(0);
+                aktualnakniha.setCena(0);
             }
 
             //todo potrebujem to dostať do tabulky
-            System.out.println(kniha.getMeno());
-            System.out.println(kniha.getAutor());
-            System.out.println(kniha.getRokvydania());
-            System.out.println(kniha.getCena());
+            System.out.println(aktualnakniha.getMeno());
+            System.out.println(aktualnakniha.getAutor());
+            System.out.println(aktualnakniha.getRokvydania());
+            System.out.println(aktualnakniha.getCena());
+
+
 
         }
 
@@ -96,6 +95,8 @@ public class ZadacieOkno extends JDialog {
         ZadacieOkno dialog = new ZadacieOkno();
         dialog.pack();
         dialog.setVisible(true);
+
+
 //        System.exit(0);
     }
 }
